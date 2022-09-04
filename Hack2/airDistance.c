@@ -15,7 +15,7 @@ int main(int argc, char **argv){
 
     R = 6,371;
 
-
+    r = deg/180 * pi
 
     printf("Origin:     ");
     scanf("%lf", &Alat);
