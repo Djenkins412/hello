@@ -12,10 +12,11 @@ int main(int argc, char **argv){
     double Blong;
     double Dis;
     double R;
+    pi=3.1415
 
     R = 6,371;
 
-    r = deg/180 * pi
+    r = deg/180 * pi ;
 
     printf("Origin:     ");
     scanf("%lf", &Alat);
