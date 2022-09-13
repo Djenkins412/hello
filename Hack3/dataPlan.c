@@ -16,6 +16,11 @@ int main(int argc, char **argv){
     int CurDay;
     double GBU;
 
-    scanf("%d", GB);
-    scanf("%d", CurDay);
-    scanf("%lf", GBU);
+    scanf("%d", &GB);
+    scanf("%d", &CurDay);
+    scanf("%lf", &GBU);
+
+    printf("%d, %d, %lf", GB, CurDay, GBU);
+
+    return 0;
+}
