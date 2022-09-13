@@ -11,3 +11,11 @@
 #include <math.h>
 
 int main(int argc, char **argv){
+
+    int GB;
+    int CurDay;
+    double GBU;
+
+    scanf("%d", GB);
+    scanf("%d", CurDay);
+    scanf("%lf", GBU);
