@@ -10,23 +10,31 @@ int main(int argc, char **argv){
     double Blat;
     double Along;
     double Blong;
-    double Dis;
-    double R;
+    double R = 6371;
 
-    R = 6,371;
 
-    printf("Origin:     ");
+    printf("Latitude of Origin: ");
     scanf("%lf", &Alat);
-    printf(", ");
+
+    printf("Longitude of Origin: ");
     scanf("%lf", &Along);
 
-    printf("Destination: ");
+    printf("Latitude of Destination: ");
     scanf("%lf", &Blat);
-    printf(", ");
+
+    printf("Longitude of Destination: ");
     scanf("%lf", &Blong);
 
-    Dis = acos(sin(Alat)*sin(Blat)+cos(Alat)*cos(Blat)*cos(Blong - Along))*R ;
+    double RLatA = (Alat/180)*M_PI;
+    double RLongA = (Along/180)*M_PI;
+    double RLatB = (Blat/180)*M_PI;
+    double RLongB = (Blong/180)*M_PI;
+    double Dis = acos((sin(RLatA)*sin(RLatB))+(cos(RLatA)*cos(RLatB)*cos(RLongB - RLongA)))*R ;
 
+    printf("          Location Distance\n");
+    printf("=====================================\n");
+    printf("Origin:      %lf, %lf\n", Alat, Along);
+    printf("Destination: %lf, %lf\n", Blat, Blong);
     printf("Air distance is %lf kms\n", Dis);
 
     return 0;
